@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vulnhash.com/schemas/vulnhash-submission-receipt-v1.schema.json",
+  "title": "VulnHash private submission receipt v1",
+  "type": "object",
+  "required": [
+    "schema",
+    "certified_hash_version",
+    "certified_hash_format",
+    "submission_id",
+    "digest_algorithm",
+    "document_hash",
+    "submitted_at",
+    "submitted_at_unix",
+    "user_id",
+    "username",
+    "certified_hash"
+  ],
+  "properties": {
+    "schema": { "const": "vulnhash-submission-receipt-v1" },
+    "certified_hash_version": { "const": "vulnhash-leaf-v1" },
+    "certified_hash_format": { "type": "string", "minLength": 1 },
+    "submission_id": { "type": "string", "format": "uuid" },
+    "digest_algorithm": { "const": "sha256" },
+    "document_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "submitted_at": { "type": "string", "format": "date-time" },
+    "submitted_at_unix": { "type": "integer" },
+    "user_id": { "type": "string", "format": "uuid" },
+    "username": { "type": "string", "minLength": 1 },
+    "certified_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  },
+  "additionalProperties": true
+}

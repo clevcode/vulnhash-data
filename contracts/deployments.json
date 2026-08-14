@@ -1,0 +1,18 @@
+{
+  "schema": "vulnhash-contract-deployments-v1",
+  "deployments": [
+    {
+      "network": "base-mainnet",
+      "chain_id": 8453,
+      "contract": "0xcef5e8b5f1f786fddded252c54c497ac0e19b689",
+      "owner": "0x8050e67be8b1e185d97291a15420f498b3d433fb",
+      "runtime_bytecode_sha256": "22ce588e11303f397a53c7b23f287bb059dc11b8b6009473220cea4b8d87bd64",
+      "anchor_selector": "0x8f5bae2e",
+      "verify_selector": "0x75e36616",
+      "anchored_event": "Anchored(bytes32,uint256,uint256)",
+      "anchored_event_topic": "0xfae1ebf57baec5ccdbe7e05f562a97eb84281ca2ab6dcd76cdd4770f11c882db",
+      "first_anchor_transaction": "0x3c10bb8dddc9efba60b8735a904a7775adfa0753b59992649a5459352965a07b",
+      "first_anchor_block": 49840930
+    }
+  ]
+}

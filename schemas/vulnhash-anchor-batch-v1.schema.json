@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vulnhash.com/schemas/vulnhash-anchor-batch-v1.schema.json",
+  "title": "VulnHash public anchor batch v1",
+  "type": "object",
+  "required": [
+    "schema",
+    "period_start",
+    "period_end",
+    "leaf_count",
+    "leaves",
+    "merkle_root",
+    "tree",
+    "chain_anchor"
+  ],
+  "properties": {
+    "schema": { "const": "vulnhash-anchor-batch-v1" },
+    "period_start": { "type": "string", "format": "date-time" },
+    "period_end": { "type": "string", "format": "date-time" },
+    "leaf_count": { "type": "integer", "minimum": 1 },
+    "leaves": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+    },
+    "merkle_root": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "tree": {
+      "type": "object",
+      "required": [
+        "certified_hash_version",
+        "node_hash_algorithm",
+        "internal_node_prefix",
+        "padding",
+        "minimum_width"
+      ],
+      "properties": {
+        "certified_hash_version": { "const": "vulnhash-leaf-v1" },
+        "node_hash_algorithm": { "const": "sha256" },
+        "internal_node_prefix": { "const": "01" },
+        "padding": { "const": "duplicate-last-to-power-of-two-minimum-two" },
+        "minimum_width": { "const": 2 }
+      },
+      "additionalProperties": true
+    },
+    "chain_anchor": {
+      "type": "object",
+      "required": [
+        "network",
+        "chain_id",
+        "contract",
+        "transaction_hash",
+        "block_number",
+        "receipt_success",
+        "anchored_at_unix",
+        "event"
+      ],
+      "properties": {
+        "network": { "const": "base-mainnet" },
+        "chain_id": { "const": 8453 },
+        "contract": { "type": "string", "pattern": "^0x[0-9a-f]{40}$" },
+        "transaction_hash": { "type": "string", "pattern": "^0x[0-9a-f]{64}$" },
+        "block_number": { "type": "integer", "minimum": 1 },
+        "receipt_success": { "const": true },
+        "anchored_at_unix": { "type": "integer", "minimum": 1 },
+        "event": { "const": "Anchored(bytes32,uint256,uint256)" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
