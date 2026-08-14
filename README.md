@@ -9,10 +9,12 @@ certified hashes in one batch and the Base-mainnet transaction that anchored
 its Merkle root. A commit-pinned copy of that file is sufficient to rebuild
 the root without the VulnHash server or database.
 
-The repository does not contain submission receipts, document hashes,
-submission UUIDs, user IDs, usernames, report contents, attachments, or
-authentication data. Researchers must privately retain both their exact
-report and `receipt.json`.
+Researcher submissions remain private: this repository does not contain their
+receipts, document hashes, submission UUIDs, user IDs, usernames, report
+contents, attachments, or authentication data. Researchers must privately
+retain both their exact report and `receipt.json`. The deliberately public
+operator-owned genesis record under `genesis/` is the sole initial exception;
+its document and receipt are published to provide a complete worked example.
 
 ## Verification
 
@@ -58,6 +60,7 @@ committed later.
 - `batches/` — create-only batch manifests named by Merkle root
 - `schemas/` — versioned JSON schemas for public manifests and private receipts
 - `contracts/` — deployed contract source, ABI, and Base deployment registry
+- `genesis/` — deliberate public production-genesis document and receipt
 - `verifier/` — dependency-free Python verifier
 - `MIRRORING.md` — independent mirroring and integrity-check instructions
 
