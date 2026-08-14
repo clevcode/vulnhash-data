@@ -1,0 +1,13 @@
+{
+  "schema": "vulnhash-submission-receipt-v1",
+  "certified_hash_version": "vulnhash-leaf-v1",
+  "certified_hash_format": "sha256(0x00 || \"vulnhash-leaf-v1\\n\" || submission_id || \"\\n\" || hash || \"\\n\" || submitted_at_unix || \"\\n\" || user_id || \"\\n\" || username)",
+  "submission_id": "d27f69d5-ad75-417a-9e4a-45aa522a966f",
+  "digest_algorithm": "sha256",
+  "document_hash": "662e4d8dfebc7fe2b730b10ab923ce631408ed2c5d4c2710934c27528baf1255",
+  "submitted_at": "2026-08-14T19:54:52Z",
+  "submitted_at_unix": 1786737292,
+  "user_id": "4a3f5126-f709-469d-b9e2-a08be65d4315",
+  "username": "clevcode-genesis",
+  "certified_hash": "1f3fabbaf9b447fbb0d5973955cc87f5fbb7273a32efa05f90d4a7d4d2d79aef"
+}
