@@ -1,0 +1,27 @@
+{
+  "schema": "vulnhash-anchor-batch-v1",
+  "period_start": "2026-08-14T19:54:52Z",
+  "period_end": "2026-08-14T19:57:17.864872665Z",
+  "leaf_count": 1,
+  "leaves": [
+    "1f3fabbaf9b447fbb0d5973955cc87f5fbb7273a32efa05f90d4a7d4d2d79aef"
+  ],
+  "merkle_root": "ea3fb90494d1af0354fd3129aa48c67a3ddafb3f6acc12ea3ae92487e25cc08a",
+  "tree": {
+    "certified_hash_version": "vulnhash-leaf-v1",
+    "node_hash_algorithm": "sha256",
+    "internal_node_prefix": "01",
+    "padding": "duplicate-last-to-power-of-two-minimum-two",
+    "minimum_width": 2
+  },
+  "chain_anchor": {
+    "network": "base-mainnet",
+    "chain_id": 8453,
+    "contract": "0x86e306175605ad8a9966cf226e7f780052b8efd3",
+    "transaction_hash": "0x1a5f21fc6c7463ecb361a8d071a230fd83271af5690a9b483ff0cb24c01d0bb2",
+    "block_number": 49974047,
+    "receipt_success": true,
+    "anchored_at_unix": 1786737441,
+    "event": "Anchored(bytes32,uint256,uint256)"
+  }
+}
