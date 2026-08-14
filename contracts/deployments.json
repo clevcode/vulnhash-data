@@ -28,7 +28,9 @@
       "anchored_event_topic": "0xfae1ebf57baec5ccdbe7e05f562a97eb84281ca2ab6dcd76cdd4770f11c882db",
       "deployment_transaction": "0x6079bfb2069b2e80ee15be6ef407f0b1842ca1bc4f2f5a5409ade85ce8ac91fc",
       "deployment_block": 49973777,
-      "deployed_at": "2026-08-14T19:48:21Z"
+      "deployed_at": "2026-08-14T19:48:21Z",
+      "first_anchor_transaction": "0x1a5f21fc6c7463ecb361a8d071a230fd83271af5690a9b483ff0cb24c01d0bb2",
+      "first_anchor_block": 49974047
     }
   ]
 }
