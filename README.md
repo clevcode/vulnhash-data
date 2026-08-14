@@ -69,6 +69,11 @@ existing path is treated as an integrity incident. Any repository rewrite,
 deletion, or retention-policy change must be publicly documented as an
 incident or policy change; independent mirrors remain valid evidence.
 
+The `main` branch rejects force pushes and deletion, enforces linear history,
+and applies those rules to repository administrators. These controls support
+the policy but do not replace independent mirrors: an administrator could
+still change repository settings or remove the repository through GitHub.
+
 ## Licensing
 
 Batch manifests and other factual evidence data are offered under CC0 1.0
