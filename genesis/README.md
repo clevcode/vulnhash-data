@@ -3,6 +3,10 @@
 `VULNHASH-GENESIS-v1.md` is a deliberate public operator submission used to
 exercise the production evidence path end to end. Unlike researcher reports,
 both its exact document and private-receipt fields are intentionally public.
+The operator invoked the server's explicit `-anchor-now` mode after submission,
+so this test used the normal durable sealing and publication state machine but
+deliberately bypassed the one-hour scheduling delay. Production remains
+configured for the ordinary one-hour interval.
 
 | Field | Value |
 | --- | --- |
